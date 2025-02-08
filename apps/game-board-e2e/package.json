@@ -1,0 +1,12 @@
+{
+  "name": "game-board-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "projectType": "application",
+    "sourceRoot": "apps/game-board-e2e/src",
+    "implicitDependencies": [
+      "game-board"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@game-hub/game-board",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "game-board",
+    "projectType": "application",
+    "sourceRoot": "apps/game-board"
+  },
+  "dependencies": {
+    "next": "~15.1.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
