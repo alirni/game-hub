@@ -5,7 +5,6 @@ export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/javascript'],
   ...nx.configs['flat/typescript'],
-  eslintPluginPrettier,
   {
     ignores: ['**/dist'],
   },
@@ -41,4 +40,5 @@ export default [
     // Override or add rules here
     rules: {},
   },
+  eslintPluginPrettier,
 ];

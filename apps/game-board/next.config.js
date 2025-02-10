@@ -11,6 +11,14 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https', // Allow any protocol (http, https)
+        hostname: '**', // Allow any hostname
+      },
+    ],
+  },
 };
 
 const plugins = [
