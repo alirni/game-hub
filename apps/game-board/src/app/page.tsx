@@ -1,4 +1,4 @@
-import { MyUi } from '@game-hub/ui';
+import { MyUi, Card } from '@game-hub/ui';
 
 export default function Index() {
   return (
@@ -6,6 +6,11 @@ export default function Index() {
       <h1 className='text-7xl'>GameHub</h1>
       <p className='text-2xl'>Welcome to the GameHub!</p>
       <MyUi />
+      <Card
+        title='test'
+        description='test test test'
+        imageUrl='/placeholder.png'
+      />
     </main>
   );
 }
