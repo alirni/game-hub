@@ -1,3 +1,5 @@
+import { Header } from '@game-hub/ui';
+
 import './global.css';
 
 export const metadata = {
@@ -12,7 +14,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <main className='flex flex-col h-full justify-between'>
+          <section className='m-2 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 relative flex flex-col  h-3/4'>
+            <Header title='GameHub'>
+              <nav>
+                <ul className='flex space-x-4'>
+                  <li>
+                    <a href='#games' className='hover:underline'>
+                      Games
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#about' className='hover:underline'>
+                      About
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </Header>
+            {children}
+          </section>
+          <footer id='about' className='flex items-center justify-center p-4'>
+            <p className='text-center text-gray-600'>
+              Welcome to the GameHub! This is a demo site for the GameHub
+              project.
+            </p>
+          </footer>
+        </main>
+      </body>
     </html>
   );
 }
