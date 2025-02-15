@@ -3,12 +3,11 @@ import { CardProps } from './Card.type';
 import Image from 'next/image';
 
 const Card: FC<CardProps> = ({ title, description, imageUrl }) => {
-  console.log('Card.tsx:6 >> imageUrl', { imageUrl });
   return (
-    <div className='min-h-72 bg-white border border-gray-300 flex flex-col rounded-md shadow-md grayscale duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:grayscale-0'>
+    <div className='min-h-72 bg-white flex flex-col rounded-3xl shadow-md grayscale duration-300 ease-in-out cursor-pointer hover:shadow-xl hover:grayscale-0'>
       <div className='relative grow'>
         <Image
-          className='rounded-t-md'
+          className='rounded-t-sm'
           src={imageUrl}
           alt='Image of a game'
           fill={true}
