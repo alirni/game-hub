@@ -1,13 +1,10 @@
-import { Card } from '@game-hub/ui';
+import { Card, Header } from '@game-hub/ui';
 
 export default function Index() {
   return (
     <main className='flex flex-col h-full justify-between'>
       <section className='m-2 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 relative flex flex-col items-center justify-center h-3/4'>
-        <header className='flex items-center justify-between py-12 px-12 w-full'>
-          <div className='flex items-center'>
-            <h1 className='text-3xl font-bold text-blue-950'>GameHub</h1>
-          </div>
+        <Header title='GameHub'>
           <nav>
             <ul className='flex space-x-4'>
               <li>
@@ -22,7 +19,7 @@ export default function Index() {
               </li>
             </ul>
           </nav>
-        </header>
+        </Header>
         <section id='games' className='grow flex flex-col items-center p-4'>
           <div className='text-center text-5xl font-bold text-blue-950 md:text-8xl mt-20 mb-7'>
             Welcome to GameHub! 🕹️
