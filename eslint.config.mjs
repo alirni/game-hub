@@ -1,15 +1,14 @@
 import nx from '@nx/eslint-plugin';
-import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 export default [
   ...nx.configs['flat/base'],
-  ...nx.configs['flat/javascript'],
   ...nx.configs['flat/typescript'],
+  ...nx.configs['flat/javascript'],
   {
     ignores: ['**/dist'],
   },
   {
-    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     rules: {
       '@nx/enforce-module-boundaries': [
         'error',
@@ -28,17 +27,16 @@ export default [
   },
   {
     files: [
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
       '**/*.ts',
       '**/*.tsx',
       '**/*.cts',
       '**/*.mts',
+      '**/*.js',
+      '**/*.jsx',
+      '**/*.cjs',
+      '**/*.mjs',
     ],
     // Override or add rules here
     rules: {},
   },
-  eslintPluginPrettier,
 ];

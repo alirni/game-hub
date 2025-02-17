@@ -2,12 +2,14 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
+    "strict": true,
     "noEmit": true,
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,39 +24,29 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "types": [
       "jest",
       "node"
-    ],
-    "outDir": "out-tsc/game-board",
-    "rootDir": "src",
-    "tsBuildInfoFile": "out-tsc/game-board/tsconfig.tsbuildinfo"
+    ]
   },
   "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
     "../../apps/game-board/.next/types/**/*.ts",
     "../../dist/apps/game-board/.next/types/**/*.ts",
+    "../../libs/ui/src/**/*.ts",
+    "../../libs/ui/src/**/*.tsx",
+    "../../libs/utils/src/**/*.ts",
+    "../../libs/utils/src/**/*.tsx",
     "next-env.d.ts",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "out-tsc",
-    "dist",
     "node_modules",
     "jest.config.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    ".next",
-    "eslint.config.js",
-    "eslint.config.cjs",
-    "eslint.config.mjs"
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
