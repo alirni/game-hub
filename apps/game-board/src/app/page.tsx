@@ -1,4 +1,4 @@
-import { Card } from '@game-hub/ui';
+import { Card } from '@game-hub/components';
 import Link from 'next/link';
 
 export default function Index() {
@@ -17,7 +17,14 @@ export default function Index() {
         additions as the collection grows!
       </div>
       <div className='w-4/5 absolute -bottom-36 grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-4'>
-        {Array.from({ length: 4 }).map((_, index) => (
+          <Link href={`/games/memory-match`}>
+            <Card
+              title={`Card memory-match`}
+              description={`This is a card memory-match`}
+              imageUrl='/placeholder.png'
+              />
+          </Link>
+        {Array.from({ length: 3 }).map((_, index) => (
           <Link key={index} href={`/games/${index + 1}`}>
             <Card
               title={`Card ${index + 1}`}

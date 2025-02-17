@@ -1,4 +1,4 @@
-import { Header } from '@game-hub/ui';
+import { Header } from '@game-hub/components';
 
 import './global.css';
 
