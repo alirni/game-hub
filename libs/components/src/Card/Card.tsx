@@ -10,8 +10,8 @@ const Card: FC<CardProps> = ({ title, description, imageUrl }) => {
           className='rounded-t-sm'
           src={imageUrl}
           alt='Image of a game'
-          fill={true}
           style={{ objectFit: 'cover' }}
+          fill
         />
       </div>
       <div className='p-4'>

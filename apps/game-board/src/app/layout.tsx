@@ -1,6 +1,7 @@
 import { Header } from '@game-hub/components';
 
 import './global.css';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'GameHub',
@@ -16,14 +17,14 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <main className='flex flex-col h-full justify-between'>
-          <section className='m-2 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 relative flex flex-col  h-3/4'>
+          <div className='flex flex-col grow'>
             <Header title='GameHub'>
               <nav>
                 <ul className='flex space-x-4'>
                   <li>
-                    <a href='#games' className='hover:underline'>
+                    <Link href='/' className='hover:underline'>
                       Games
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href='#about' className='hover:underline'>
@@ -34,7 +35,8 @@ export default function RootLayout({
               </nav>
             </Header>
             {children}
-          </section>
+          </div>
+          {/* </section> */}
           <footer id='about' className='flex items-center justify-center p-4'>
             <p className='text-center text-gray-600'>
               Welcome to the GameHub! This is a demo site for the GameHub
