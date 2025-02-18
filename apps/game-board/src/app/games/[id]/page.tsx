@@ -31,6 +31,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@game-hub/libs/ui/select';
+import Image from 'next/image';
 
 const games = {
   'memory-match': {
@@ -187,13 +188,13 @@ const GamePage = ({ params }: { params: { id: string } }) => {
             </div>
           </CardHeader>
           <CardContent>
-            {/* <Image
-              src='/placeholder.svg?height=400&width=800'
+            <Image
+              src='/placeholder.png'
               alt={game.title}
               className='w-full h-[400px] object-cover rounded-lg mb-6'
-              style={{ objectFit: 'cover' }}
-              fill
-            /> */}
+              width={800}
+              height={400}
+            />
             <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-6'>
               <div className='flex items-center gap-2'>
                 <Clock className='h-4 w-4 text-muted-foreground' />
@@ -445,13 +446,13 @@ const GamePage = ({ params }: { params: { id: string } }) => {
                 <Link key={relatedGame.id} href={`/games/${relatedGame.id}`}>
                   <Card className='hover:shadow-lg transition-shadow'>
                     <CardContent className='p-4'>
-                      {/* <Image
-                        src='/placeholder.svg?height=150&width=250'
+                      <Image
+                        src='/placeholder.png'
                         alt={relatedGame.title}
                         className='w-full h-[150px] object-cover rounded-lg mb-4'
-                        style={{ objectFit: 'cover' }}
-                        fill
-                      /> */}
+                        width={400}
+                        height={150}
+                      />
                       <h3 className='font-semibold'>{relatedGame.title}</h3>
                       <Badge variant='secondary' className='mt-2'>
                         {relatedGame.difficulty}

@@ -7,10 +7,9 @@ const Card: FC<CardProps> = ({ title, description, imageUrl }) => {
     <div className='min-h-72 bg-white flex flex-col rounded-3xl shadow-md grayscale duration-300 ease-in-out cursor-pointer hover:shadow-xl hover:grayscale-0'>
       <div className='relative grow'>
         <Image
-          className='rounded-t-sm'
+          className='rounded-t-sm object-cover'
           src={imageUrl}
           alt='Image of a game'
-          style={{ objectFit: 'cover' }}
           fill
         />
       </div>
