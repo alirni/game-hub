@@ -34,16 +34,13 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
-    "../../libs/components/src/**/*.ts",
-    "../../libs/ui/src/**/*.ts",
-    "../../libs/utils/src/**/*.ts",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
   ],
   "exclude": [
     "node_modules",
     "jest.config.ts",
     "**/*.spec.ts",
-    "**/*.test.ts"
+    "**/*.test.ts",
   ]
 }

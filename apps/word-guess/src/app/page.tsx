@@ -1,5 +1,5 @@
-import { SetupContainer } from "../components";
-import GameSetupProvider from "../contexts/GameSetupContext";
+import { SetupContainer } from '../components';
+import GameSetupProvider from '../contexts/GameSetupContext';
 
 export default function Index() {
   return (

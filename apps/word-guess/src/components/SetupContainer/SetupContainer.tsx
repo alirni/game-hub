@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { FC, useContext } from 'react';
 
@@ -19,19 +19,22 @@ import {
 } from '@game-hub/libs/ui/select';
 
 import { useFormik } from 'formik';
-import { GameSetupContext, GameSetupContextType } from '../../contexts/GameSetupContext';
+import {
+  GameSetupContext,
+  GameSetupContextType,
+} from '../../contexts/GameSetupContext';
 
 const SetupContainer: FC = () => {
   const { config, changeConfig } = useContext(
     GameSetupContext
   ) as GameSetupContextType;
 
-    const formik = useFormik({
-      initialValues: config,
-      onSubmit: (values) => {
-        changeConfig(values);
-      },
-    });
+  const formik = useFormik({
+    initialValues: config,
+    onSubmit: (values) => {
+      changeConfig(values);
+    },
+  });
 
   const onCustomChange = (name: string) => (value: unknown) => {
     formik.handleChange({
@@ -41,14 +44,14 @@ const SetupContainer: FC = () => {
       },
     });
   };
-  
+
   return (
     <Card className='w-96 mt-8'>
-        <form onSubmit={formik.handleSubmit}>
-      <CardHeader>
-        <CardTitle className='text-lg'>Setup</CardTitle>
-      </CardHeader>
-      <CardContent>
+      <form onSubmit={formik.handleSubmit}>
+        <CardHeader>
+          <CardTitle className='text-lg'>Setup</CardTitle>
+        </CardHeader>
+        <CardContent>
           <div className='mb-4'>
             <label className='text-lg mb-2 flex'>Difficulty</label>
             <Select
@@ -120,18 +123,14 @@ const SetupContainer: FC = () => {
               </SelectContent>
             </Select>
           </div>
-      </CardContent>
+        </CardContent>
 
-      <CardFooter className='flex'>
-        <Button
-          size='lg'
-          className='w-full'
-          type='submit'
-          >
-          Start
-        </Button>
-      </CardFooter>
-          </form>
+        <CardFooter className='flex'>
+          <Button size='lg' className='w-full' type='submit'>
+            Start
+          </Button>
+        </CardFooter>
+      </form>
     </Card>
   );
 };

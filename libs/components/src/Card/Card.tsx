@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { CardProps } from './Card.type';
 import Image from 'next/image';
 

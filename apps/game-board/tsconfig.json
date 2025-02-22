@@ -34,12 +34,6 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
-    "../../apps/game-board/.next/types/**/*.ts",
-    "../../dist/apps/game-board/.next/types/**/*.ts",
-    "../../libs/ui/src/**/*.ts",
-    "../../libs/ui/src/**/*.tsx",
-    "../../libs/utils/src/**/*.ts",
-    "../../libs/utils/src/**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

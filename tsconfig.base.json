@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@game-hub/components": ["libs/components/src/index.ts"],
-      "@game-hub/components/server": ["libs/components/src/server.ts"],
       "@game-hub/libs/ui": ["libs/ui/src"],
       "@game-hub/libs/ui/*": ["libs/ui/src/*"],
       "@game-hub/utils": ["libs/utils/src"],

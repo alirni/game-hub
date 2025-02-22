@@ -21,7 +21,12 @@ import {
   CardDescription,
 } from '@game-hub/libs/ui/card';
 import { Button } from '@game-hub/libs/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@game-hub/libs/ui/tabs';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@game-hub/libs/ui/tabs';
 import { Badge } from '@game-hub/libs/ui/badge';
 import { Progress } from '@game-hub/libs/ui/progress';
 import {
@@ -150,9 +155,7 @@ const GamePage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div
-      className='rounded-b-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-8 m-2 mt-0'
-    >
+    <div className='rounded-b-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-8 m-2 mt-0'>
       <div className='container mx-auto px-4 grid gap-6'>
         {/* Main Game Info Card */}
         <Card>
