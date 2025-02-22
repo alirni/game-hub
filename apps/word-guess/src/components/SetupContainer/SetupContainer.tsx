@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 
 import { Button } from '@game-hub/libs/ui/button';
 import {
@@ -19,18 +19,18 @@ import {
 } from '@game-hub/libs/ui/select';
 
 import { useFormik } from 'formik';
+import { GameSetupContext, GameSetupContextType } from '../../contexts/GameSetupContext';
 
 const SetupContainer: FC = () => {
+  const { config, changeConfig } = useContext(
+    GameSetupContext
+  ) as GameSetupContextType;
 
     const formik = useFormik({
-      initialValues: {
-        difficulty: 'medium',
-        category: 'animals',
-        numberOfWords: '5',
-        timeLimit: '60',
-      },
+      initialValues: config,
       onSubmit: (values) => {
         console.log('SetupContainer.tsx:33 >> values', { values });
+        changeConfig(values);
       },
     });
 
