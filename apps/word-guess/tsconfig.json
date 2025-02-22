@@ -34,8 +34,9 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
-    "../../apps/word-guess/.next/types/**/*.ts",
-    "../../dist/apps/word-guess/.next/types/**/*.ts",
+    "../../libs/components/src/**/*.ts",
+    "../../libs/ui/src/**/*.ts",
+    "../../libs/utils/src/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
