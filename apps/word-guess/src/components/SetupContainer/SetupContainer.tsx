@@ -29,7 +29,6 @@ const SetupContainer: FC = () => {
     const formik = useFormik({
       initialValues: config,
       onSubmit: (values) => {
-        console.log('SetupContainer.tsx:33 >> values', { values });
         changeConfig(values);
       },
     });
