@@ -24,8 +24,8 @@ import {
   GameSetupContextType,
 } from '../../contexts/GameSetupContext';
 
-const SetupContainer: FC = () => {
-  const { config, changeConfig } = useContext(
+const SetupForm: FC = () => {
+  const { config, changeConfig, startGame } = useContext(
     GameSetupContext
   ) as GameSetupContextType;
 
@@ -33,6 +33,7 @@ const SetupContainer: FC = () => {
     initialValues: config,
     onSubmit: (values) => {
       changeConfig(values);
+      startGame();
     },
   });
 
@@ -135,4 +136,4 @@ const SetupContainer: FC = () => {
   );
 };
 
-export default SetupContainer;
+export default SetupForm;

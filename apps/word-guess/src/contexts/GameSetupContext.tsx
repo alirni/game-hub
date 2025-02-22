@@ -12,6 +12,8 @@ interface GameConfig {
 export type GameSetupContextType = {
   config: GameConfig;
   changeConfig: (values: GameConfig) => void;
+  showGame: boolean;
+  startGame: () => void;
 };
 
 export const GameSetupContext = createContext<GameSetupContextType | null>(
@@ -19,6 +21,8 @@ export const GameSetupContext = createContext<GameSetupContextType | null>(
 );
 
 const GameSetupProvider: FC<{ children: ReactNode }> = ({ children }) => {
+  const [showGame, setShowGame] = useState(false);
+
   const [config, setConfig] = useState<GameConfig>({
     difficulty: 'medium',
     category: 'animals',
@@ -30,8 +34,14 @@ const GameSetupProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setConfig({ ...values });
   };
 
+  const startGame = () => {
+    setShowGame(true);
+  };
+
   return (
-    <GameSetupContext.Provider value={{ config, changeConfig }}>
+    <GameSetupContext.Provider
+      value={{ config, changeConfig, showGame, startGame }}
+    >
       {children}
     </GameSetupContext.Provider>
   );

@@ -1,1 +1,1 @@
-export * from './SetupContainer';
+export * from './GameContainer';

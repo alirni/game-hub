@@ -1,4 +1,4 @@
-import { SetupContainer } from '../components';
+import { GameContainer } from '../components';
 import GameSetupProvider from '../contexts/GameSetupContext';
 
 export default function Index() {
@@ -8,7 +8,7 @@ export default function Index() {
       <p className='text-2xl text-gray-500'>Guess the word</p>
 
       <GameSetupProvider>
-        <SetupContainer />
+        <GameContainer />
       </GameSetupProvider>
     </main>
   );
